@@ -1,5 +1,5 @@
 {
-  "_generado": "2026-08-26T17:15:51.571Z",
+  "_generado": "2026-08-26T17:22:35.663Z",
   "estaciones": [
     {
       "estacion_id": 52,
@@ -23,7 +23,7 @@
         "valor_escala": 0.38,
         "valor_ign": -0.15,
         "timeupdate": "2026-08-26T16:42:42.054Z",
-        "antiguedad_min": 33
+        "antiguedad_min": 40
       },
       "calidad": {
         "estado": "fresco",
@@ -816,7 +816,7 @@
       },
       "meteo": {
         "fuente": "open-meteo",
-        "generado": "2026-08-26T17:15:51.571Z",
+        "generado": "2026-08-26T17:22:35.663Z",
         "hourly": {
           "time": [
             "2026-08-26T00:00",
@@ -1627,7 +1627,7 @@
         "valor_escala": 1.54,
         "valor_ign": 0.081,
         "timeupdate": "2026-08-26T17:03:38.011Z",
-        "antiguedad_min": 12
+        "antiguedad_min": 19
       },
       "calidad": {
         "estado": "fresco",
@@ -1638,7 +1638,7 @@
       },
       "meteo": {
         "fuente": "open-meteo",
-        "generado": "2026-08-26T17:15:51.571Z",
+        "generado": "2026-08-26T17:22:35.663Z",
         "hourly": {
           "time": [
             "2026-08-26T00:00",
@@ -2446,7 +2446,7 @@
         "valor_escala": 1.93,
         "valor_ign": null,
         "timeupdate": "2026-08-26T17:03:37.146Z",
-        "antiguedad_min": 12
+        "antiguedad_min": 19
       },
       "calidad": {
         "estado": "fresco",
@@ -2475,7 +2475,7 @@
         "valor_escala": 1.16,
         "valor_ign": null,
         "timeupdate": "2026-08-26T17:04:46.090Z",
-        "antiguedad_min": 11
+        "antiguedad_min": 18
       },
       "calidad": {
         "estado": "fresco",
@@ -2507,7 +2507,7 @@
         "valor_escala": 0.7,
         "valor_ign": null,
         "timeupdate": "2026-08-26T14:52:47.695Z",
-        "antiguedad_min": 143
+        "antiguedad_min": 150
       },
       "calidad": {
         "estado": "fresco",
@@ -2518,7 +2518,7 @@
       },
       "meteo": {
         "fuente": "open-meteo",
-        "generado": "2026-08-26T17:15:51.571Z",
+        "generado": "2026-08-26T17:22:35.663Z",
         "hourly": {
           "time": [
             "2026-08-26T00:00",
