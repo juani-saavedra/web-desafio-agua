@@ -3,6 +3,35 @@
 Contexto completo en `docs/`. Leer `docs/README.md` primero, después los demás
 archivos en orden numérico.
 
+## Estado actual del repo
+
+**Todavía no existe la app Next.js** — no hay `package.json` ni directorio de
+app en la raíz. Lo que sí está implementado es la ingesta completa:
+
+- `scripts/ingesta/index.mjs` consulta niveles de agua (API a5 del INA:
+  observaciones + pronóstico donde hay `cal_id`) y pronóstico meteorológico
+  (Open-Meteo, para las estaciones con `coords`), normaliza a cota IGN y
+  `calidad.estado`, y escribe `data/latest.json`. Usa sólo módulos built-in
+  de Node (`fs`, `path`) + `fetch` nativo — sin dependencias, sin
+  `package.json`.
+- El pronóstico del INA (`corridas/last`) sólo devuelve la última corrida —
+  cada una que no se guarda se pierde. Por eso cada corrida se archiva
+  completa (incluye ~2 semanas de historia de calibración, no sólo el
+  horizonte futuro) en `data/pronosticos/{estacion_id}_{forecast_date}.json`.
+  `data/latest.json` sólo expone los puntos desde `forecast_date` en
+  adelante, para no inflar el archivo que se commitea cada hora.
+- `.github/workflows/ingesta.yml` corre ese script cada hora (`cron: '17 * * * *'`)
+  y commitea `data/` si cambió. El commit lo hace `ingesta-bot`, con
+  `[skip ci]`. **No edites `data/latest.json` a mano** — es el output del
+  script, se sobreescribe en la próxima corrida.
+- `scripts/ingesta/estaciones.config.json` es la fuente de verdad: 5
+  estaciones hidrométricas + 1 meteorológica, con `cero_ign`, `series_id` y
+  umbrales (muchos en `null` — ver regla 3). La ingesta no tiene ningún ID
+  hardcodeado.
+
+Cuando se arranque la app Next.js, seguir el patrón de datos de abajo y crear
+el `package.json` en la raíz (no en `scripts/`).
+
 ## Reglas innegociables
 
 1. **`cota_IGN = lectura_escala + cero_ign`.** Nunca comparar lecturas crudas
@@ -68,6 +97,8 @@ Ver `docs/01-fuentes-datos.md`. Las más importantes:
 ## Comandos
 
 ```bash
-node scripts/ingesta/index.mjs        # corre la ingesta localmente
-npm run dev                            # levanta la web en desarrollo
+node scripts/ingesta/index.mjs        # corre la ingesta localmente (hoy: escribe el placeholder)
 ```
+
+`npm run dev` todavía no aplica — no hay app Next.js creada. Agregar esta
+sección cuando exista `package.json`.
