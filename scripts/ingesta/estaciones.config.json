@@ -49,8 +49,8 @@
       "nombre_largo": "Canal Seoane",
       "rio": "Canal Seoane",
       "red": "ina_delta",
-      "coords": null,
-      "cero_ign": null,
+      "coords": [-34.167, -58.638],
+      "cero_ign": -1.047,
       "series": {
         "observacion": 149
       },
@@ -68,8 +68,8 @@
       "nombre_largo": "Miní - Ministerio",
       "rio": "Paraná Miní",
       "red": "ina_delta",
-      "coords": null,
-      "cero_ign": null,
+      "coords": [-34.1238, -58.5796],
+      "cero_ign": -0.55,
       "series": {
         "observacion": 42282
       },
@@ -91,6 +91,25 @@
       "cero_ign": null,
       "series": {
         "observacion": 42
+      },
+      "pronostico": null,
+      "umbrales": {
+        "nivel_alerta": null,
+        "nivel_evacuacion": null,
+        "nivel_aguas_bajas": null,
+        "fuente": null
+      }
+    },
+    {
+      "estacion_id": 6831,
+      "nombre": "Arroyo Toro",
+      "nombre_largo": "Arroyo Toro",
+      "rio": "Arroyo Toro",
+      "red": "ina_delta",
+      "coords": [-34.3225, -58.596],
+      "cero_ign": -0.266,
+      "series": {
+        "observacion": 34847
       },
       "pronostico": null,
       "umbrales": {
