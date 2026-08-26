@@ -8,9 +8,13 @@ out/
 # producción
 build/
 
+# testing
+coverage/
+
 # varios
 .DS_Store
 *.tgz
+*.pem
 .env
 .env*.local
 
