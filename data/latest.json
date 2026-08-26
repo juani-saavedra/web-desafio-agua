@@ -1,5 +1,5 @@
 {
-  "_generado": "2026-08-26T21:24:32.496Z",
+  "_generado": "2026-08-26T21:44:56.004Z",
   "estaciones": [
     {
       "estacion_id": 52,
@@ -23,7 +23,7 @@
         "valor_escala": 0.19,
         "valor_ign": -0.34,
         "timeupdate": "2026-08-26T20:41:40.720Z",
-        "antiguedad_min": 43
+        "antiguedad_min": 63
       },
       "calidad": {
         "estado": "fresco",
@@ -816,7 +816,7 @@
       },
       "meteo": {
         "fuente": "open-meteo",
-        "generado": "2026-08-26T21:24:32.496Z",
+        "generado": "2026-08-26T21:44:56.004Z",
         "hourly": {
           "time": [
             "2026-08-26T00:00",
@@ -1627,7 +1627,7 @@
         "valor_escala": 1.36,
         "valor_ign": -0.099,
         "timeupdate": "2026-08-26T21:10:25.094Z",
-        "antiguedad_min": 14
+        "antiguedad_min": 35
       },
       "calidad": {
         "estado": "fresco",
@@ -1638,7 +1638,7 @@
       },
       "meteo": {
         "fuente": "open-meteo",
-        "generado": "2026-08-26T21:24:32.496Z",
+        "generado": "2026-08-26T21:44:56.004Z",
         "hourly": {
           "time": [
             "2026-08-26T00:00",
@@ -2449,7 +2449,7 @@
         "valor_escala": 1.83,
         "valor_ign": 0.783,
         "timeupdate": "2026-08-26T21:10:22.627Z",
-        "antiguedad_min": 14
+        "antiguedad_min": 35
       },
       "calidad": {
         "estado": "fresco",
@@ -2460,7 +2460,7 @@
       },
       "meteo": {
         "fuente": "open-meteo",
-        "generado": "2026-08-26T21:24:32.496Z",
+        "generado": "2026-08-26T21:44:56.004Z",
         "hourly": {
           "time": [
             "2026-08-26T00:00",
@@ -3271,7 +3271,7 @@
         "valor_escala": 1.08,
         "valor_ign": 0.53,
         "timeupdate": "2026-08-26T21:11:58.187Z",
-        "antiguedad_min": 13
+        "antiguedad_min": 33
       },
       "calidad": {
         "estado": "fresco",
@@ -3282,7 +3282,7 @@
       },
       "meteo": {
         "fuente": "open-meteo",
-        "generado": "2026-08-26T21:24:32.496Z",
+        "generado": "2026-08-26T21:44:56.004Z",
         "hourly": {
           "time": [
             "2026-08-26T00:00",
@@ -4093,7 +4093,7 @@
         "valor_escala": 0.7,
         "valor_ign": null,
         "timeupdate": "2026-08-26T14:52:47.695Z",
-        "antiguedad_min": 392
+        "antiguedad_min": 412
       },
       "calidad": {
         "estado": "demorado",
@@ -4104,7 +4104,7 @@
       },
       "meteo": {
         "fuente": "open-meteo",
-        "generado": "2026-08-26T21:24:32.496Z",
+        "generado": "2026-08-26T21:44:56.004Z",
         "hourly": {
           "time": [
             "2026-08-26T00:00",
@@ -4920,7 +4920,7 @@
       },
       "meteo": {
         "fuente": "open-meteo",
-        "generado": "2026-08-26T21:24:32.496Z",
+        "generado": "2026-08-26T21:44:56.004Z",
         "hourly": {
           "time": [
             "2026-08-26T00:00",
