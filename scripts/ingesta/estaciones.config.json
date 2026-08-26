@@ -1,0 +1,125 @@
+{
+  "estaciones": [
+    {
+      "estacion_id": 52,
+      "nombre": "San Fernando",
+      "nombre_largo": "San Fernando (desembocadura del río Luján)",
+      "rio": "Luján",
+      "red": "alturas_prefe",
+      "coords": [-34.4333333333, -58.55],
+      "cero_ign": -0.53,
+      "series": {
+        "observacion": 52,
+        "horaria": 31605
+      },
+      "pronostico": {
+        "series_id": 26202,
+        "cal_id": 432
+      },
+      "umbrales": {
+        "nivel_alerta": 3.0,
+        "nivel_evacuacion": 3.5,
+        "nivel_aguas_bajas": 0.33,
+        "fuente": "INA"
+      }
+    },
+    {
+      "estacion_id": 1698,
+      "nombre": "Arroyo Carapachay",
+      "nombre_largo": "Arroyo Carapachay",
+      "rio": "Carapachay",
+      "red": "ina_delta",
+      "coords": [-34.356202, -58.633833],
+      "cero_ign": -1.459,
+      "series": {
+        "observacion": 3279,
+        "media_diaria": 26388
+      },
+      "pronostico": null,
+      "umbrales": {
+        "nivel_alerta": null,
+        "nivel_evacuacion": null,
+        "nivel_aguas_bajas": null,
+        "fuente": null
+      }
+    },
+    {
+      "estacion_id": 149,
+      "nombre": "Canal Seoane",
+      "nombre_largo": "Canal Seoane",
+      "rio": "Canal Seoane",
+      "red": "ina_delta",
+      "coords": null,
+      "cero_ign": null,
+      "series": {
+        "observacion": 149
+      },
+      "pronostico": null,
+      "umbrales": {
+        "nivel_alerta": null,
+        "nivel_evacuacion": null,
+        "nivel_aguas_bajas": null,
+        "fuente": null
+      }
+    },
+    {
+      "estacion_id": 8173,
+      "nombre": "Miní - Ministerio",
+      "nombre_largo": "Miní - Ministerio",
+      "rio": "Paraná Miní",
+      "red": "ina_delta",
+      "coords": null,
+      "cero_ign": null,
+      "series": {
+        "observacion": 42282
+      },
+      "pronostico": null,
+      "umbrales": {
+        "nivel_alerta": null,
+        "nivel_evacuacion": null,
+        "nivel_aguas_bajas": null,
+        "fuente": null
+      }
+    },
+    {
+      "estacion_id": 42,
+      "nombre": "Escobar",
+      "nombre_largo": "Escobar",
+      "rio": "Luján",
+      "red": "alturas_prefe",
+      "coords": [-34.3, -58.7333333333],
+      "cero_ign": null,
+      "series": {
+        "observacion": 42
+      },
+      "pronostico": null,
+      "umbrales": {
+        "nivel_alerta": null,
+        "nivel_evacuacion": null,
+        "nivel_aguas_bajas": null,
+        "fuente": null
+      }
+    }
+  ],
+  "meteorologicas": [
+    {
+      "estacion_id": 5904,
+      "nombre": "PN Ciervo de los Pantanos",
+      "red": "sat2",
+      "coords": null,
+      "series": {
+        "presion": 37100,
+        "humedad": 37099,
+        "viento_dir": 37103,
+        "viento_vel": 37098,
+        "temperatura": 37102,
+        "precipitacion": null
+      }
+    }
+  ],
+  "_meta": {
+    "fuente": "docs/02-estaciones.md",
+    "actualizado": "2026-08-26",
+    "nota": "coords en formato [lat, lon] para Leaflet. null = pendiente de verificar."
+  }
+}

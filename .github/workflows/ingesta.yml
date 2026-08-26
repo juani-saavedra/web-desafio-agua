@@ -1,0 +1,39 @@
+name: ingesta
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingesta
+  cancel-in-progress: false
+
+jobs:
+  ingesta:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Correr ingesta
+        run: node scripts/ingesta/index.mjs
+
+      - name: Commitear si hay cambios
+        run: |
+          git config user.name "ingesta-bot"
+          git config user.email "actions@github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "Sin cambios en data/"
+            exit 0
+          fi
+          git commit -m "datos: $(date -u +'%Y-%m-%dT%H:%MZ') [skip ci]"
+          git pull --rebase --autostash
+          git push
