@@ -2,7 +2,7 @@ import { aHoraArgentina, formatoMetros } from '../lib/formato';
 import PronosticoChart from './PronosticoChart';
 
 const ESTADO_LABEL = {
-  fresco: 'Fresco',
+  fresco: 'Actualizado',
   demorado: 'Demorado',
   sin_dato: 'Sin dato',
 };
@@ -29,6 +29,7 @@ export default function PanelEstacion({ estacion }) {
       <div className="calidad" style={{ borderColor: ESTADO_COLOR[calidad.estado] }}>
         <span className="calidad-punto" style={{ background: ESTADO_COLOR[calidad.estado] }} />
         {ESTADO_LABEL[calidad.estado]}
+        {obs ? ` · hace ${obs.antiguedad_min} min` : ''}
       </div>
 
       {obs ? (
@@ -41,9 +42,6 @@ export default function PanelEstacion({ estacion }) {
           </p>
           <p>
             <strong>Medido:</strong> {aHoraArgentina(obs.timestamp)}
-          </p>
-          <p>
-            <strong>Antigüedad:</strong> {obs.antiguedad_min} min
           </p>
         </div>
       ) : (
