@@ -1,5 +1,5 @@
 {
-  "_generado": "2026-08-26T17:22:35.663Z",
+  "_generado": "2026-08-26T18:15:25.827Z",
   "estaciones": [
     {
       "estacion_id": 52,
@@ -23,7 +23,7 @@
         "valor_escala": 0.38,
         "valor_ign": -0.15,
         "timeupdate": "2026-08-26T16:42:42.054Z",
-        "antiguedad_min": 40
+        "antiguedad_min": 93
       },
       "calidad": {
         "estado": "fresco",
@@ -816,7 +816,7 @@
       },
       "meteo": {
         "fuente": "open-meteo",
-        "generado": "2026-08-26T17:22:35.663Z",
+        "generado": "2026-08-26T18:15:25.827Z",
         "hourly": {
           "time": [
             "2026-08-26T00:00",
@@ -1623,11 +1623,11 @@
         "fuente": null
       },
       "ultima_observacion": {
-        "timestamp": "2026-08-26T15:45:10.000Z",
-        "valor_escala": 1.54,
-        "valor_ign": 0.081,
-        "timeupdate": "2026-08-26T17:03:38.011Z",
-        "antiguedad_min": 19
+        "timestamp": "2026-08-26T16:45:10.000Z",
+        "valor_escala": 1.49,
+        "valor_ign": 0.031,
+        "timeupdate": "2026-08-26T18:04:39.429Z",
+        "antiguedad_min": 11
       },
       "calidad": {
         "estado": "fresco",
@@ -1638,7 +1638,7 @@
       },
       "meteo": {
         "fuente": "open-meteo",
-        "generado": "2026-08-26T17:22:35.663Z",
+        "generado": "2026-08-26T18:15:25.827Z",
         "hourly": {
           "time": [
             "2026-08-26T00:00",
@@ -2442,11 +2442,11 @@
         "fuente": null
       },
       "ultima_observacion": {
-        "timestamp": "2026-08-26T15:45:10.000Z",
-        "valor_escala": 1.93,
+        "timestamp": "2026-08-26T16:45:10.000Z",
+        "valor_escala": 1.89,
         "valor_ign": null,
-        "timeupdate": "2026-08-26T17:03:37.146Z",
-        "antiguedad_min": 19
+        "timeupdate": "2026-08-26T18:04:38.677Z",
+        "antiguedad_min": 11
       },
       "calidad": {
         "estado": "fresco",
@@ -2471,11 +2471,11 @@
         "fuente": null
       },
       "ultima_observacion": {
-        "timestamp": "2026-08-26T15:45:11.000Z",
-        "valor_escala": 1.16,
+        "timestamp": "2026-08-26T16:45:11.000Z",
+        "valor_escala": 1.14,
         "valor_ign": null,
-        "timeupdate": "2026-08-26T17:04:46.090Z",
-        "antiguedad_min": 18
+        "timeupdate": "2026-08-26T18:05:47.809Z",
+        "antiguedad_min": 10
       },
       "calidad": {
         "estado": "fresco",
@@ -2507,10 +2507,10 @@
         "valor_escala": 0.7,
         "valor_ign": null,
         "timeupdate": "2026-08-26T14:52:47.695Z",
-        "antiguedad_min": 150
+        "antiguedad_min": 203
       },
       "calidad": {
-        "estado": "fresco",
+        "estado": "demorado",
         "umbral_demorado_min": 180
       },
       "pronostico": {
@@ -2518,7 +2518,7 @@
       },
       "meteo": {
         "fuente": "open-meteo",
-        "generado": "2026-08-26T17:22:35.663Z",
+        "generado": "2026-08-26T18:15:25.827Z",
         "hourly": {
           "time": [
             "2026-08-26T00:00",
