@@ -173,6 +173,12 @@ Y peor: los arroyos de la cuenca media de Escobar **no tienen estación
 hidrométrica pública** (ver `02-estaciones.md`). Sin serie histórica no hay nada
 que calibrar.
 
+> ✅ **Esto dejó de ser una inferencia.** `docs/06-cobertura.md` lo confirmó
+> contra el catálogo completo del INA a5 (4.680 estaciones, todas las redes)
+> y los portales de datos abiertos de Escobar y Tigre: A° Escobar–Pinazo/
+> Burgueño, Tajamar, Tatán, Garín y (en Tigre) A° Claro no tienen sensor
+> público en ninguna fuente relevada.
+
 **Implicancias:**
 
 1. El dato de **lluvia local** pasa de "sería lindo tenerlo" a requisito

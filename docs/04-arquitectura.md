@@ -30,6 +30,13 @@ no hace falta.
 
 ## Patrón de datos: desacoplar ingesta de presentación ⚠️ importante
 
+> ✅ **Implementado, con una diferencia respecto al plan de acá abajo**: en
+> vez de `fetch` a `raw.githubusercontent.com` con `revalidate`, la app lee
+> `data/latest.json` del filesystem en build time (queda estática) y confía
+> en que cada push de la ingesta dispara un rebuild completo en Vercel. El
+> principio (no pegarle a la API del INA desde el frontend) se cumple igual.
+> Detalle real en `CLAUDE.md`, sección "Patrón de datos".
+
 **No hacer fetch a las APIs externas desde el frontend.**
 
 Motivos:
@@ -139,14 +146,20 @@ parte que va a cambiar más veces.
 
 Una sola página:
 
-1. **Mapa** con marcadores de las estaciones disponibles en Escobar–Tigre–San
-   Fernando.
-2. Por estación: último valor (en escala y en cota IGN), cuándo se actualizó,
-   estado del dato, y si tiene pronóstico.
-3. **Panel lateral** con la alerta vigente del SMN para la zona (consumida, no
-   construida).
-4. Para las estaciones con pronóstico: gráfico con la curva `main` y la banda
-   p25–p75.
+1. ✅ **Mapa** con marcadores de las estaciones disponibles en Escobar–Tigre–San
+   Fernando. Implementado — marcadores diferenciados por color según si la
+   estación tiene pronóstico o no.
+2. ✅ Por estación: último valor (en escala y en cota IGN), cuándo se actualizó,
+   estado del dato, y si tiene pronóstico. Implementado — panel lateral al
+   hacer click en un marcador.
+3. ❌ **Panel lateral** con la alerta vigente del SMN para la zona (consumida, no
+   construida). **No implementado todavía** — sigue en el plan, no se hizo en
+   esta primera versión.
+4. ✅ Para las estaciones con pronóstico: gráfico con la curva `main` y la banda
+   p25–p75. Implementado con `recharts`.
+
+Código en `app/` (Next.js, App Router). Ver `CLAUDE.md` para la estructura de
+componentes.
 
 Esto es el **inventario en vivo de fuentes** con forma de producto. Sirve a los
 cuatro integrantes:

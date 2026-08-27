@@ -10,6 +10,7 @@ Archivos de contexto para el proyecto de desarrollo de la plataforma.
 | `03-hallazgos-tecnicos.md` | Análisis medido: desfasaje, datum, latencia, huecos | Al decidir cómo procesar y qué mostrar |
 | `04-arquitectura.md` | Stack, patrón de datos, qué NO construir | Antes de escribir la primera línea |
 | `05-pendientes.md` | Bloqueantes, verificaciones abiertas, riesgos | Al planificar; revisar semanalmente |
+| `06-cobertura.md` | Relevamiento con evidencia de qué cursos de agua tienen/no tienen sensor público | Al hablar de cobertura o vacancia con el equipo o en el demo day |
 
 ## Convención de estado
 

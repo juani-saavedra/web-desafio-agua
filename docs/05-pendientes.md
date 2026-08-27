@@ -54,28 +54,64 @@ Lo relevado hasta ahora:
 Falta chequear: ADA (Autoridad del Agua PBA), COMIREC, apps municipales de
 Escobar y Tigre, Tiempo y Radar.
 
+> ⚠️ **Parcialmente cubierto** por `docs/06-cobertura.md`: ese relevamiento sí
+> tocó ADA, COMIREC y los portales de datos abiertos de Escobar y Tigre, pero
+> desde el ángulo de "¿tienen sensores públicos?", no desde "¿ya existe un
+> producto/dashboard que compita con el nuestro?". Sirve como insumo, pero la
+> pregunta de competencia original (¿alguien ya integra estas fuentes en un
+> producto de cara al usuario?) sigue sin responder para esos tres actores.
+
 ---
 
 ## Verificaciones técnicas pendientes
 
+- [x] **`series_id` de las estaciones interiores faltantes**: Arroyo Toro
+      (34847), Arroyo Martínez (3278), Arroyo Borches (2111), Carabelas
+      (26206) — resuelto y doble-verificado en `docs/06-cobertura.md`.
+      Sólo Arroyo Toro cae en la zona de foco (se agregó al dataset,
+      discontinuada desde 2023); las otras tres quedan fuera.
+- [x] **Ubicación de Arroyo Martínez**: confirmado **Entre Ríos** (Villa
+      Paranacito), no Delta bonaerense — fuera del foco del proyecto.
+- [x] **`series_id` de precipitación** en PN Ciervo de los Pantanos (5904):
+      son 5 series, no una (horaria 31986, 3-horaria 31987, diaria 31985,
+      intervalo nativo 31984, acumulada 31983) — ver `docs/02-estaciones.md`.
+      Todavía no cargado en `estaciones.config.json`.
+- [x] **Estaciones automáticas SINARAME**: ninguna dentro del bbox del
+      proyecto (51 en el país, la más cercana a ~55 km). Las 51 están
+      marcadas `public: false` en el catálogo del INA, así que el mecanismo
+      de descarga real (¿login? ¿CSV manual?) sigue sin confirmar — no
+      importa para esta zona, pero quedó ❓ como dato general.
+- [x] **Red hidrológica nacional** (argentina.gob.ar / SSRH): confirmado que
+      **no** tiene puntos en Escobar ni cuenca media/alta del Luján dentro
+      del bbox del proyecto (265 estaciones nacionales, 0 en zona; las más
+      cercanas están 15-40 km río arriba). Verificado vía el catálogo a5 del
+      INA (red `alturas_bdhi`), no vía el portal — el portal es sólo un mapa
+      interactivo, no expone un listado por fetch.
 - [ ] **Frecuencia real de actualización del pronóstico**: la web del INA dice
       cada 3 h, el paper de CONAGUA 2025 dice cada 6 h. Afecta la frecuencia del
       cron.
-- [ ] **`series_id` de las estaciones interiores faltantes**: Arroyo Toro,
-      Arroyo Martínez, Arroyo Borches, Carabelas.
-- [ ] **Ubicación de Arroyo Martínez** (~-33.658): ¿sigue siendo Delta
-      bonaerense o ya es Entre Ríos?
-- [ ] **`series_id` de precipitación** en PN Ciervo de los Pantanos (5904).
 - [ ] **API del SMN**: explorar `public-api-test.smn.gov.ar` y ver si hay
       endpoint estable de alertas y de estaciones automáticas.
-- [ ] **Estaciones automáticas SINARAME**: cómo se descargan desde el SNIH y si
-      hay alguna en la zona de interés.
-- [ ] **Red hidrológica nacional** (argentina.gob.ar): ¿tiene puntos en Escobar
-      o cuenca alta del Luján?
 - [ ] **Campo `automatica: false`** en estaciones que actualizan solas cada ~85
       min: ¿el campo está desactualizado o significa otra cosa?
 - [ ] **Límite de cron en el plan gratuito de Vercel** (por si se decide usarlo
-      en vez de Actions).
+      en vez de Actions) — dejó de ser relevante en la práctica: la ingesta
+      corre por GitHub Actions, no por cron de Vercel.
+- [ ] **Reconquista–Canal Aliviador (Tigre)**: existe el proyecto SIMPARH
+      (ADA-PBA + COMIREC, 15 estaciones automáticas + centro en San
+      Fernando) pero sin portal de datos públicos encontrado, y con fechas
+      contradictorias entre fuentes (una dice terminado en feb-2026, ya
+      pasado). Alguien tiene que llamar a ADA/COMIREC para confirmar si ya
+      está operativo — ver `docs/06-cobertura.md` nota².
+- [ ] **Puntos `lujan_api` cerca de Escobar** (Puente Ruta Nac. 9, Puente
+      Granadero Gelves): marcados `public: false` en el catálogo del INA —
+      falta probar si eso bloquea la lectura de datos o es sólo metadata
+      (ver `docs/06-cobertura.md` nota¹).
+- [x] **Pipeline de deploy**: confirmado en producción que el push de
+      `ingesta-bot` dispara el auto-deploy de Vercel solo, sin intervención
+      manual (probado con `gh workflow run` + verificado el deployment
+      resultante por API). No hay riesgo de loop: el workflow de ingesta
+      sólo corre por `schedule`/`workflow_dispatch`, nunca por `push`.
 
 ---
 

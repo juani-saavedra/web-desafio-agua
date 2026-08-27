@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Desafío AGUA
 
-## Getting Started
+Dataset unificado de niveles de agua y pronóstico para la cuenca media de
+Escobar y Tigre, con una web que lo expone. Proyecto del equipo formado en la
+Hackatón **CarpinchIA 2026** (Universidad Nacional del Delta), eje temático
+Agua.
 
-First, run the development server:
+**Esto NO es un sistema de alerta de emergencia.** Es información
+complementaria — ver `docs/04-arquitectura.md` para el porqué.
+
+## Qué hay acá
+
+- `scripts/ingesta/` — script Node sin dependencias que consulta la API a5
+  del INA (niveles + pronóstico) y Open-Meteo (lluvia/viento), normaliza a
+  cota IGN, y escribe `data/latest.json`. Corre solo cada hora vía
+  `.github/workflows/ingesta.yml`.
+- `app/` — la web (Next.js, App Router): mapa con las estaciones, panel de
+  detalle por estación, gráfico de pronóstico.
+- `docs/` — todo el contexto del proyecto (equipo, fuentes de datos,
+  hallazgos técnicos, arquitectura, pendientes, cobertura hidrométrica).
+  Empezar por `docs/README.md`.
+
+## Desarrollo
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+La web lee `data/latest.json` directo del filesystem — ya viene en el repo
+y se actualiza solo por el cron, así que no hace falta correr la ingesta
+para levantar la web localmente.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Para correr la ingesta a mano (pega en vivo a INA + Open-Meteo):
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+node scripts/ingesta/index.mjs
+```
 
-## Learn More
+Otros comandos: `npm run build` (producción), `npm run lint`.
 
-To learn more about Next.js, take a look at the following resources:
+## Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Next.js (App Router) + React-Leaflet/OpenStreetMap + recharts, ingesta por
+GitHub Actions, hosting en Vercel (temporal, se migra a UNDelta). Detalle
+completo en `docs/04-arquitectura.md` y en `CLAUDE.md`.
