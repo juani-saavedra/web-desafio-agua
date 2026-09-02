@@ -1,5 +1,5 @@
 {
-  "_generado": "2026-09-02T19:50:36.297Z",
+  "_generado": "2026-09-02T22:41:45.869Z",
   "estaciones": [
     {
       "estacion_id": 52,
@@ -19,11 +19,11 @@
         "fuente": "INA"
       },
       "ultima_observacion": {
-        "timestamp": "2026-09-02T18:45:00.000Z",
-        "valor_escala": 1.06,
-        "valor_ign": 0.53,
-        "timeupdate": "2026-09-02T19:41:22.894Z",
-        "antiguedad_min": 9
+        "timestamp": "2026-09-02T20:45:00.000Z",
+        "valor_escala": 0.82,
+        "valor_ign": 0.29,
+        "timeupdate": "2026-09-02T21:45:08.030Z",
+        "antiguedad_min": 57
       },
       "calidad": {
         "estado": "fresco",
@@ -816,7 +816,7 @@
       },
       "meteo": {
         "fuente": "open-meteo",
-        "generado": "2026-09-02T19:50:36.297Z",
+        "generado": "2026-09-02T22:41:45.869Z",
         "hourly": {
           "time": [
             "2026-09-02T00:00",
@@ -1623,11 +1623,11 @@
         "fuente": null
       },
       "ultima_observacion": {
-        "timestamp": "2026-09-02T17:45:10.000Z",
-        "valor_escala": 2.3,
-        "valor_ign": 0.841,
-        "timeupdate": "2026-09-02T19:07:15.167Z",
-        "antiguedad_min": 43
+        "timestamp": "2026-09-02T20:45:10.000Z",
+        "valor_escala": 2.02,
+        "valor_ign": 0.561,
+        "timeupdate": "2026-09-02T22:07:20.653Z",
+        "antiguedad_min": 34
       },
       "calidad": {
         "estado": "fresco",
@@ -1638,7 +1638,7 @@
       },
       "meteo": {
         "fuente": "open-meteo",
-        "generado": "2026-09-02T19:50:36.297Z",
+        "generado": "2026-09-02T22:41:45.869Z",
         "hourly": {
           "time": [
             "2026-09-02T00:00",
@@ -2445,11 +2445,11 @@
         "fuente": null
       },
       "ultima_observacion": {
-        "timestamp": "2026-09-02T17:45:10.000Z",
-        "valor_escala": 2.32,
-        "valor_ign": 1.273,
-        "timeupdate": "2026-09-02T19:07:14.125Z",
-        "antiguedad_min": 43
+        "timestamp": "2026-09-02T20:45:10.000Z",
+        "valor_escala": 2.16,
+        "valor_ign": 1.113,
+        "timeupdate": "2026-09-02T22:07:19.797Z",
+        "antiguedad_min": 34
       },
       "calidad": {
         "estado": "fresco",
@@ -2460,7 +2460,7 @@
       },
       "meteo": {
         "fuente": "open-meteo",
-        "generado": "2026-09-02T19:50:36.297Z",
+        "generado": "2026-09-02T22:41:45.869Z",
         "hourly": {
           "time": [
             "2026-09-02T00:00",
@@ -3267,11 +3267,11 @@
         "fuente": null
       },
       "ultima_observacion": {
-        "timestamp": "2026-09-02T17:45:11.000Z",
-        "valor_escala": 1.32,
-        "valor_ign": 0.77,
-        "timeupdate": "2026-09-02T19:08:37.148Z",
-        "antiguedad_min": 42
+        "timestamp": "2026-09-02T20:45:11.000Z",
+        "valor_escala": 1.24,
+        "valor_ign": 0.69,
+        "timeupdate": "2026-09-02T22:08:42.905Z",
+        "antiguedad_min": 33
       },
       "calidad": {
         "estado": "fresco",
@@ -3282,7 +3282,7 @@
       },
       "meteo": {
         "fuente": "open-meteo",
-        "generado": "2026-09-02T19:50:36.297Z",
+        "generado": "2026-09-02T22:41:45.869Z",
         "hourly": {
           "time": [
             "2026-09-02T00:00",
@@ -4093,7 +4093,7 @@
         "valor_escala": 1,
         "valor_ign": null,
         "timeupdate": "2026-09-02T14:46:40.032Z",
-        "antiguedad_min": 304
+        "antiguedad_min": 475
       },
       "calidad": {
         "estado": "demorado",
@@ -4104,7 +4104,7 @@
       },
       "meteo": {
         "fuente": "open-meteo",
-        "generado": "2026-09-02T19:50:36.297Z",
+        "generado": "2026-09-02T22:41:45.869Z",
         "hourly": {
           "time": [
             "2026-09-02T00:00",
@@ -4920,7 +4920,7 @@
       },
       "meteo": {
         "fuente": "open-meteo",
-        "generado": "2026-09-02T19:50:36.297Z",
+        "generado": "2026-09-02T22:41:45.869Z",
         "hourly": {
           "time": [
             "2026-09-02T00:00",
